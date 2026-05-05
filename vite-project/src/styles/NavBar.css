@@ -1,0 +1,87 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 250, 248, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--clr-ink);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  font-size: 14px;
+  color: var(--clr-ink);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.navbar-links a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--clr-ink-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.navbar-links a:hover {
+  color: var(--clr-ink);
+}
+
+.btn-add-project {
+  background: var(--clr-ink);
+  color: white;
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-add-project:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.btn-add-project:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-inner {
+    padding: 0 1rem;
+  }
+}
